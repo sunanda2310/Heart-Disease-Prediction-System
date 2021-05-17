@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     {% load static %}
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Heart Disease Prediction System</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+    <!--[if lt IE 9]>
+      <script src= "{% static 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js' %}"></script>
+      <script src="{% static 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script><![endif]-->
+<style>
+
+#container-login {
+    background-color: #130404;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#container-register {
+    background-color: #1D1F20;
+    position: relative;
+    top: 20%;
+    margin: auto;
+     width: 600px;
+    height: 600px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+#title {
+    position: relative;
+    background-color: #0ba2ec;
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 0.35em;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lock {
+	position: relative;
+	top: 2px;
+}
+
+.input {
+    margin: auto;
+    width: 450px;
+    border-radius: 4px;
+    background-color: #373b3d;
+    padding: 8px 0px;
+    margin-top: 15px;
+}
+
+.input-addon {
+    float: left;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 4px 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+input[type=text] {
+    color: #fff;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border: 1px solid #373b3d;
+}
+
+input[type=password] {
+    color: #fff;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=password]:focus {
+    border: 1px solid #373b3d;
+}
+
+input[type=email] {
+    color: #fff;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=email]:focus {
+    border: 1px solid #373b3d;
+}
+
+.forgot-password {
+    position: relative;
+    bottom: 0%;
+}
+
+.forgot-password a:link {
+    color: #C1C3C6;
+    text-decoration: none;
+}
+
+.forgot-password a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #FFF;
+    transition: color 1s;
+}
+
+.privacy {
+    margin-top: 5px;
+    position: relative;
+    font-size: 12px;
+    bottom: 0%;
+}
+
+.privacy a:link {
+    color: #949494;
+    text-decoration: none;
+}
+
+.privacy a:visited {
+    color: #949494;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    color: #C1C3C6;
+    transition: color 1s;
+}
+
+*:focus {
+    outline: none;
+}
+
+.remember-me {
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    padding: 6px 25px;
+    background: #373E4A;
+    color: #C1C3C6;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register {
+    margin-bottom: 20px;
+    margin: auto;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+    border-top: 1px solid #C1C3C6;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#register-link {
+    margin-top: 10px;
+    padding: 6px 25px;
+    background: #373E4A;
+    color: #C1C3C6;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+</style>
+</head>
+<!-- body -->
+
+	{% include 'header.html' %}
+<body class="main-layout">
+    <div class="contactbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contacttitlepage">
+                        <h2>Sign Up</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-register">
+        <div id="title">
+            Register
+        </div>
+
+        <form action="/profile/" method="POST">{% csrf_token %}
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">Email :</i>
+                </div>
+                <input id="email" name="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <div class="material-icons">Username : </div>
+                </div>
+                <input id="username" name="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <div class="material-icons">Password</div>
+                </div>
+                <input id="password" name="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox">
+                <span style="color: #DDD">I accept Terms of Service</span>
+            </div>
+
+            <input type="submit" value="Register" />
+        </form>
+
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
+            </div>
+        <div class="register">
+            Do you already have an account?
+        </br><a href="{% url 'login' %}"><button id="register-link">Log In here</button></a>
+        </div>
+    </div>
+
+</br>
+{% include 'footer.html' %}
+</body>
+</html>

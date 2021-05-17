@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Heart Disease Prediction System</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+{% include 'header.html' %}
+<body class="main-layout">
+    
+
+    <div class="aboutbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="abouttitlepage">
+                        <h2>about</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 padding">
+                <div class="img-box">
+                    <figure><img src="{% static 'images/heart1.png' %}" alt="img" /></figure>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 padding">
+                
+<section class="info container">
+          <h1 class="mainHeading2">Heart Disease Prediction System Using Machine Learning</h1>
+        <p>The major killer of human death is Heart Disease. Many researchers have discovered new technologies to prognosticate the disease early before it's
+            too late for helping healthcare and people. These processes are still under the research phase. Heart Disease Prediction System Machine Learning
+            Project is faster-emerging technology of Artificial Intelligence that contributes various algorithms for heart disease. Our project provides different classification
+            algorithms to divine the probability of a patient having HD.
+        </br> In this Website, an effective heart disease prediction system (EHDPS) is developed using Random forest ML algorithm for predicting the risk level of heart disease. 
+        The system uses 14 medical parameters such as age, sex, blood pressure, cholesterol, and obesity for prediction.
+        The EHDPS predicts the likelihood of patients getting heart disease. It enables significant knowledge, eg, relationships between medical factors related to heart disease and patterns, to be established. 
+           </p>
+                <section class="info container">
+          <h1 class="mainHeading2">How to know if a heart is healthy?</h1>
+
+                <p>A healthy heart is the key to good life .The heart is a vital organ of the human body which ensures the effective pumping of blood throughout the circulatory system. Due to our sedentary lives and food habits, the heart is prone to malfunctioning, and heart attack (i.e. coronary artery disease), is one of the primary cause of death [1]. Heart attack is caused by a blockage of the coronary arteries, typically at a site of narrowing (stenosis) caused by atherosclerosis. It is difficult to accurately determine the degree of atherosclerosis in arteries, particularly in the early stages of disease. One method that has been introduced is the intravascular ultrasonic catheter (IVUS), which sends a pulse of sound from a receiver and uses the returned echo to deduce the properties of the arterial tissues.</p>
+
+
+            </div>
+
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}
+</body>
+
+</html>
